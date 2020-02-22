@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/layout.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -75,6 +76,9 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <footer>
+            <small>copyright MyCinemaReview 2020</small>
+        </footer>
     </div>
 </body>
 </html>
