@@ -15,7 +15,8 @@ class CreateReviewsTable extends Migration
             $table->string('genre');
             $table->varchar('story');
             $table->varchar('body');
-            $table->string('image');
+            $table->integer('rating');
+            $table->varchar('image');
             $table->timestamps();
 
         });
