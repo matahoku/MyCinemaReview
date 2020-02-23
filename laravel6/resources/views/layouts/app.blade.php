@@ -56,6 +56,9 @@
                             @endif
                         @else
                             <li class="nav-item">
+                              <a class="nav-link" href="">Myシネマレビューとは？</a>
+                            </li>
+                            <li class="nav-item">
                               <a class="nav-link" href="{{ route('create') }}">レビューを書く</a>
                             </li>
                             <li class="nav-item dropdown">
