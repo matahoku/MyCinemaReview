@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreRequest;
 
 class TopController extends Controller
 {
@@ -15,4 +16,15 @@ class TopController extends Controller
     {
       return view('reviews');
     }
+
+    public function store(StoreRequest $request)
+    {
+
+
+
+      $request->file('image')->store('/public/images');
+    }
+
+
+
 }

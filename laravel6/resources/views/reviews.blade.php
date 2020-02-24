@@ -77,7 +77,6 @@
               </div>
 
               <input type='submit' class='btn btn-primary' value='レビューを登録'>
-              <!-- 編集破棄の確認モーダルを追加する -->
               <input type="button" class="btn btn-primary" onclick="history.back()" value="編集をやめる">
             </div>
         </div>
