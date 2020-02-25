@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Review;
 use App\Http\Requests\StoreRequest;
 
 class TopController extends Controller
@@ -14,17 +15,24 @@ class TopController extends Controller
 
     public function create()
     {
-      return view('reviews');
+      return view('review');
     }
 
-    public function store(StoreRequest $request)
+    public function store(Request $request)
     {
+      $post = $request->all();
 
-
-
-      $request->file('image')->store('/public/images');
-    }
-
-
+      if ($request->hasFile('image')) {
+          $request->file('image')->store('/public/images');
+          $data = ['user_id'=> \Auth::id(), 'title'=>$post['title'], 'genre'=>$post['genre'],
+                   'story'=>$post['story'], 'body'=>$post['body'], 'rating'=>$post['rating'],
+                   'image'=>$request->file('image')->hashName()];
+        } else {
+          $data = ['user_id'=> \Auth::id(), 'title'=>$post['title'], 'genre'=>$post['genre'],
+                  'story'=>$post['story'], 'body'=>$post['body'], 'rating'=>$post['rating']];
+        }
+        Review::insert($data);
+        return redirect('/home');
+      }
 
 }

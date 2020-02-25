@@ -8,4 +8,4 @@ Route::get('/','TopController@index');
 
 Route::get('/review','TopController@create')->name('create');
 
-Route::post('/review','TopController@store')->name('store');
+Route::post('/review/store','TopController@store')->name('store');
