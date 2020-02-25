@@ -18,9 +18,10 @@ class TopController extends Controller
       return view('review');
     }
 
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
       $post = $request->all();
+      $validated = $request->validated();
 
       if ($request->hasFile('image')) {
           $request->file('image')->store('/public/images');

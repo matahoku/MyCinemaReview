@@ -9,12 +9,7 @@ class StoreRequest extends FormRequest
 
     public function authorize()
     {
-      if ($this->path() == 'review/store')
-      {
-          return true;
-      } else {
-          return false;
-      }
+      return true;
     }
 
     public function rules()
