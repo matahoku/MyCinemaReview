@@ -7,14 +7,14 @@
 @section('content')
 <h1 class='pagetitle'>レビュー投稿ページ</h1>
 @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+      <div class="alert alert-danger">
+          <ul>
+              @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+@endif
 <div class="row justify-content-center container">
     <div class="col-md-10">
       <form method='POST' action="{{ route('store') }}" enctype="multipart/form-data">
@@ -58,7 +58,7 @@
 
               <div class="form-group">
               <label>レビュー本文</label>
-                <textarea class='description form-control' name='body'  placeholder='本文を入力'>{{ old('body') }}</textarea>
+                <textarea class='description form-control' name='body'  placeholder='レビューを入力'>{{ old('body') }}</textarea>
               </div>
 
               <fieldset class="starability-slot">
