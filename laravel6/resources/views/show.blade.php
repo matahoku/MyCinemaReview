@@ -24,13 +24,16 @@
         </section>
         <aside class="review-image">
           @if(!empty($review->image))
-            <img class="book-image" src="{{ asset('storage/images/'.$review->image) }}" >
+            <img class="movie-image" src="{{ asset('storage/images/'.$review->image) }}" >
           @else
-            <img class="book-image" src="{{ asset('images/dummy.png') }}">
+            <img class="movie-image" src="{{ asset('images/dummy.png') }}">
           @endif
         </aside>
       </div>
-      <a href="{{ route('home') }}" class="btn btn-info btn-back mb20">一覧へ戻る</a>
+      <div class="card-button">
+        <a href="{{ route('home') }}" class="btn btn-info btn-back mb20">一覧へ戻る</a>
+        <a href="{{ route('edit', ['id' => $review->id ]) }}" class="btn btn-info btn-back mb20"  >編集する</a>
+      </div>
     </div>
   </div>
 </div>

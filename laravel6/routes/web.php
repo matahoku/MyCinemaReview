@@ -11,3 +11,5 @@ Route::get('/show/{id}','TopController@show')->name('show');
 Route::get('/review','TopController@create')->name('create');
 
 Route::post('/review/store','TopController@store')->name('store');
+
+Route::get('/edit/{id}','TopController@edit')->name('edit');

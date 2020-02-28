@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="container">
-<h1 class='pagetitl'>レビュー投稿ページ</h1>
+<h1 class='pagetitl'>レビュー編集ページ</h1>
 @if ($errors->any())
       <div class="alert alert-danger">
           <ul>
@@ -85,7 +85,7 @@
                 <input type="file" id="file1" name='image' class="form-control-file">
               </div>
 
-              <input type='submit' class='btn btn-primary' value='レビューを登録'>
+              <input type='submit' class='btn btn-primary' value='レビューを更新'>
               <input type="button" class="btn btn-primary" onclick="history.back()" value="編集をやめる">
             </div>
         </div>

@@ -43,4 +43,10 @@ class TopController extends Controller
         return redirect('/home');
       }
 
+ public function edit($id)
+ {
+   $editCard = Review::where('id', $id)->first();
+   return view('edit',compact('editCard'));
+ }
+
 }

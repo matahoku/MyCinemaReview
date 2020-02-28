@@ -86,10 +86,10 @@
         <div class="search bar">
             @yield('searchbar')
         </div>
-        <main class="py-4">
+        <main class="main">
             @yield('content')
         </main>
-        <footer class="p10">
+        <footer class="footer p10">
             <small>copyright MyCinemaReview 2020</small>
         </footer>
     </div>
