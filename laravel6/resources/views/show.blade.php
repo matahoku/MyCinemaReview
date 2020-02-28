@@ -32,7 +32,7 @@
       </div>
       <div class="card-button">
         <a href="{{ route('home') }}" class="btn btn-info btn-back mb20">一覧へ戻る</a>
-        <a href="{{ route('edit', ['id' => $review->id ]) }}" class="btn btn-info btn-back mb20"  >編集する</a>
+        <a href="{{ route('edit', ['id' => $review->id ]) }}" class="btn btn-info btn-back mb20"  >編集</a>
       </div>
     </div>
   </div>

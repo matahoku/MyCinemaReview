@@ -41,12 +41,21 @@ class TopController extends Controller
         }
         Review::insert($data);
         return redirect('/home');
-      }
+    }
 
- public function edit($id)
- {
-   $editCard = Review::where('id', $id)->first();
-   return view('edit',compact('editCard'));
- }
+    public function edit($id)
+    {
+      $review = Review::findOrFail($id);
+      return view('edit', ['form'=> $review ] );
+    }
+
+    public function update(StoreRequest $request)
+    {
+      $review = Review::findOrFail($request->id);
+      $form = $request->all();
+      unset($form['_token']);
+      $review->fill($form)->save();
+      return redirect('/home');
+    }
 
 }

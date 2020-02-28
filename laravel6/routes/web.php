@@ -12,4 +12,6 @@ Route::get('/review','TopController@create')->name('create');
 
 Route::post('/review/store','TopController@store')->name('store');
 
-Route::get('/edit/{id}','TopController@edit')->name('edit');
+Route::get('/review/edit/{id}','TopController@edit')->name('edit');
+
+Route::post('/review/edit','TopController@update')->name('update');
