@@ -6,7 +6,6 @@
 
 @section('content')
 <div class="container">
-<h1 class='pagetitl'>レビュー投稿ページ</h1>
 @if ($errors->any())
       <div class="alert alert-danger">
           <ul>
@@ -18,6 +17,7 @@
 @endif
 <div class="row justify-content-center container">
     <div class="col-md-10">
+      <h1 class='pagetitl'>レビュー投稿ページ</h1>
       <form method='POST' action="{{ route('store') }}" enctype="multipart/form-data">
         @csrf
         <div class="card">
@@ -32,7 +32,7 @@
                 <label>ジャンル</label>
                 <select class="form-control" value="{{ old('genre') }}" name="genre" required>
                   <option value="">--選択して下さい--</option>
-                  <option value="アクション" selected @if( old('genre')=='アクション') selected @endif>アクション</option>
+                  <option value="アクション"  @if( old('genre')=='アクション') selected @endif>アクション</option>
                   <option value="アドベンチャー"  @if( old('genre')=='アドベンチャー') selected @endif>アドベンチャー</option>
                   <option value="SF" @if( old('genre')=='SF') selected @endif>SF</option>
                   <option value="ファンタジー" @if( old('genre')=='ファンタジー') selected @endif>ファンタジー</option>

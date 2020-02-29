@@ -6,7 +6,6 @@
 
 @section('content')
 <div class="container">
-<h1 class='pagetitl'>レビュー編集ページ</h1>
 @if ($errors->any())
       <div class="alert alert-danger">
           <ul>
@@ -18,6 +17,7 @@
 @endif
 <div class="row justify-content-center container">
     <div class="col-md-10">
+      <h1 class='pagetitl' >レビュー編集ページ</h1>
       <form method='POST' action="{{ route('update') }}" enctype="multipart/form-data">
         @csrf
         <div class="card">
@@ -83,8 +83,8 @@
               </fieldset>
 
               <div class="form-group">
-                <label for="file1" style="margin-top:10px;">映画のサムネイル</label>
-                <input type="file" id="file1" name='image' class="form-control-file" value="{{ $form->image }}">
+                <label for="file1" style="margin-top:10px;">映画のサムネイル（※サムネイルは再設定して下さい。）</label>
+                <input type="file" id="file1" name='image' class="form-control-file">
               </div>
 
               <input type='submit' class='btn btn-primary' value='レビューを更新'>

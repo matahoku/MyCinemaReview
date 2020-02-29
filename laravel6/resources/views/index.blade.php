@@ -4,8 +4,8 @@
   <link href="{{ asset('css/top.css') }}" rel="stylesheet">
 @endsection
 
-@section('searchbar')
-
+@section('switch')
+ <a href="{{ route('home')}}" class="btn-gradient-3d-simple">Myページへ</a>
 @endsection
 
 @section('content')

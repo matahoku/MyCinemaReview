@@ -4,6 +4,10 @@
 <link href="{{ asset('css/top.css') }}" rel="stylesheet">
 @endsection
 
+@section('switch')
+<a href="{{ route('/') }}" class="btn-gradient-3d-orange">公開ページへ</a>
+@endsection
+
 @section('content')
 <div class="row justify-content-center container ">
   @foreach ($reviews as $review)

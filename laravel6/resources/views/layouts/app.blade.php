@@ -20,6 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/layout.css') }}" rel="stylesheet">
     <link href="{{ asset('css/utility.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/search.css') }}" rel="stylesheet" >
     @yield('css')
 </head>
 <body>
@@ -83,9 +84,28 @@
                 </div>
             </div>
         </nav>
-        <div class="search bar">
-            @yield('searchbar')
-        </div>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark" >
+          <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <ul class="navbar-nav">
+               <li class="nav-item active">
+                   <form class="form-inline" action="index.html" method="post">
+                     <input class="form-control mr-sm-1" type="search" placeholder="キーワード検索" style="width:270px;">
+                     <button class="btn btn-primary" type="submit">検索</button>
+                   </form>
+               </li>
+               <li class="nav-item" >
+               </li>
+             </ul>
+           </div>
+           <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            @yield('switch')
+           </div>
+         </div>
+        </nav>
         <main class="main">
             @yield('content')
         </main>
