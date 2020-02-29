@@ -89,6 +89,7 @@
 
               <input type='submit' class='btn btn-primary' value='レビューを更新'>
               <input type="button" class="btn btn-primary" onclick="history.back()" value="編集をやめる">
+              <input type="submit" class="btn btn-primary" formaction="{{ route('delete')  }}"  value="レビューを削除" style="margin-left:30px;">
             </div>
         </div>
       </form>

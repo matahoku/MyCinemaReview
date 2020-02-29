@@ -58,4 +58,11 @@ class TopController extends Controller
       return redirect('/home');
     }
 
+    public function delete(Request $request)
+    {
+      Review::find($request->id)->delete();
+      return redirect('/home');
+    }
+
+
 }
