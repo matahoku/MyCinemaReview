@@ -92,8 +92,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <ul class="navbar-nav">
                <li class="nav-item active">
-                   <form class="form-inline" action="index.html" method="post">
-                     <input class="form-control mr-sm-1" type="search" placeholder="キーワード検索" style="width:270px;">
+                   <form class="form-inline" action="{{ route('homeSearch') }}" method="post">
+                     @csrf
+                     <input class="form-control mr-sm-1" name="input" type="search" placeholder="キーワード検索" style="width:270px;">
                      <button class="btn btn-primary" type="submit">検索</button>
                    </form>
                </li>

@@ -9,23 +9,23 @@
 @endsection
 
 @section('content')
+<h2 class='container'>の検索結果</h2>
 <div class="row justify-content-center container ">
-  @foreach ($reviews as $review)
+  @foreach ($item as $item)
     <div class="col-md-4">
         <div class="card mb50">
             <div class="card-body">
-              @if(!empty($review->image))
-              <div class="image-wrapper"><img class="movie-image" src="{{ asset('storage/images/'.$review->image) }}"></div>
+              @if(!empty($item->image))
+              <div class="image-wrapper"><img class="movie-image" src="{{ asset('storage/images/'.$item->image) }}"></div>
               @else
               <div class="image-wrapper"><img src="{{ asset('images/dummy.png') }}" class="movie-image" ></div>
               @endif
-              <h3 class="movie-title">{{ $review->title }}</h3>
-              <p class="description">{{ $review->body }}</p>
-              <a href="{{ route('show', ['id' => $review->id ]) }}" class="btn btn-secondary detail-btn">詳細を読む</a>
+              <h3 class="movie-title">{{ $item->title }}</h3>
+              <p class="description">{{ $item->body }}</p>
+              <a href="{{ route('show', ['id' => $item->id ]) }}" class="btn btn-secondary detail-btn">詳細を読む</a>
             </div>
         </div>
     </div>
   @endforeach
 </div>
-{{ $reviews->links() }}
 @endsection

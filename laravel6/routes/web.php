@@ -17,3 +17,5 @@ Route::get('/review/edit/{id}','TopController@edit')->name('edit');
 Route::post('/review/edit','TopController@update')->name('update');
 
 Route::post('/review/edit/delete','TopController@delete')->name('delete');
+
+Route::post('/review/homeSearch', 'TopController@homeSearch')->name('homeSearch');

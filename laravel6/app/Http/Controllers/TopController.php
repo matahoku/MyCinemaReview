@@ -64,5 +64,12 @@ class TopController extends Controller
       return redirect('/home');
     }
 
+    public function homeSearch(Request $request)
+    {
+      $item = Review::where('title', 'like', '%'. $request->input .'%')->orderBy('create_at', 'DESC')->get();
+      $param = ['item' => $item];
+      return view('homeSearch', $param);
+    }
+
 
 }
