@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-<h2 class='container'>の検索結果</h2>
+<h2 class='container'>「{{$input}}」の検索結果</h2>
 <div class="row justify-content-center container ">
   @foreach ($item as $item)
     <div class="col-md-4">
