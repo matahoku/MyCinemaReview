@@ -15,7 +15,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        $reviews = Review::where('status',1)->orderBy('create_at', 'DESC')->paginate(9);
+        $reviews = Review::whereBetween('status',[1,2])->orderBy('create_at', 'DESC')->paginate(9);
         return view('home', compact('reviews'));
     }
 }

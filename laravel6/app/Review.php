@@ -8,4 +8,5 @@ class Review extends Model
 {
     protected $guarded = ['id'];
 
+
 }

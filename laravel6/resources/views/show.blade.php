@@ -33,6 +33,21 @@
       <div class="card-button">
         <a href="{{ route('home') }}" class="btn btn-info btn-back mb20">一覧へ戻る</a>
         <a href="{{ route('edit', ['id' => $review->id ]) }}" class="btn btn-info btn-back mb20"  >編集</a>
+        @if($review->status == 1)
+          <form  action="{{ route('release') }}" method="post" style="display:inline-block;">
+            @csrf
+            <input type="hidden" name="status" value="{{ $review->status }}">
+            <input type="hidden" name="id" value="{{ $review->id }}">
+            <input  class="btn btn-success btn-back mb20" value="公開する" type="submit">
+          </form>
+        @elseif($review->status == 2)
+          <form  action="{{ route('private') }}" method="post" style="display:inline-block;">
+            @csrf
+            <input type="hidden" name="status" value="{{ $review->status }}">
+            <input type="hidden" name="id" value="{{ $review->id }}">
+            <input class="btn btn-success btn-back mb20" value="公開をやめる" type="submit">
+          </form>
+        @endif
       </div>
     </div>
   </div>

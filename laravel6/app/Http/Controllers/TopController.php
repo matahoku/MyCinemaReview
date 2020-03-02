@@ -10,13 +10,13 @@ class TopController extends Controller
 {
     public function index()
     {
-      $reviews = Review::where('status',1)->orderBy('create_at', 'DESC')->paginate(9);
+      $reviews = Review::where('status',2)->orderBy('create_at', 'DESC')->paginate(9);
       return view('index', compact('reviews'));
     }
 
     public function show($id)
     {
-      $review = Review::where('id', $id)->where('status', 1)->first();
+      $review = Review::where('id', $id)->first();
       return view('show', compact('review'));
     }
 
@@ -70,6 +70,23 @@ class TopController extends Controller
       $param = ['input' =>$request->input ,'item' => $item];
       return view('homeSearch', $param);
     }
+
+    public function release(Request $request)
+    {
+      $review = Review::findOrFail($request->id);
+      $review->increment('status',1);
+      $review->save();
+      return redirect('/home');
+    }
+
+    public function private(Request $request)
+    {
+      $review = Review::findOrFail($request->id);
+      $review->decrement('status',1);
+      $review->save();
+      return redirect('/home');
+    }
+
 
 
 }

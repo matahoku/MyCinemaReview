@@ -20,6 +20,7 @@ class StoreRequest extends FormRequest
           'story' => 'required',
           'body' => 'required',
           'rating' => 'required',
+          'status' => 'exists:reviews',
           'image' => 'mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
     }
