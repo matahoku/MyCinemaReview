@@ -70,6 +70,13 @@ class TopController extends Controller
       return redirect('/home');
     }
 
+    public function indexSearch(Request $request)
+    {
+      $item = Review::where('title', 'like', '%'. $request->input .'%')->orderBy('create_at', 'DESC')->get();
+      $param = ['input' =>$request->input ,'item' => $item];
+      return view('indexSearch', $param);
+    }
+
     public function homeSearch(Request $request)
     {
       $item = Review::where('title', 'like', '%'. $request->input .'%')->orderBy('create_at', 'DESC')->get();
