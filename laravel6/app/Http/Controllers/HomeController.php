@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Review;
-use App\Http\Requests\StoreRequest;
 
 class HomeController extends Controller
 {
@@ -15,7 +15,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        $reviews = Review::whereBetween('status',[1,2])->orderBy('create_at', 'DESC')->paginate(9);
+        $reviews = Review::where('user_id', Auth::id())->orderBy('create_at', 'DESC')->paginate(9);
         return view('home', compact('reviews'));
     }
 }

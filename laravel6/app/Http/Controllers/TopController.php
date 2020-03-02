@@ -89,7 +89,7 @@ class TopController extends Controller
       $review = Review::findOrFail($request->id);
       $review->increment('status',1);
       $review->save();
-      return redirect('/home');
+      return back();
     }
 
     public function private(Request $request)
@@ -97,7 +97,7 @@ class TopController extends Controller
       $review = Review::findOrFail($request->id);
       $review->decrement('status',1);
       $review->save();
-      return redirect('/home');
+      return back();
     }
 
 

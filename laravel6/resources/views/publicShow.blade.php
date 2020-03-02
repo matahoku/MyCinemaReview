@@ -17,7 +17,6 @@
 <a href="{{ route('home')}}" class="btn-gradient-3d-simple" style="text-decoration:none;">マイページへ</a>
 @endsection
 
-
 @section('content')
 <div class="container">
   <h1 class="pagetitle">レビュー詳細ページ</h1>
