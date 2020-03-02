@@ -21,7 +21,7 @@
               @endif
               <h3 class="movie-title">{{ $review->title }}</h3>
               <p class="description">{{ $review->body }}</p>
-              <a href="{{ route('show', ['id' => $review->id ]) }}" class="btn btn-secondary detail-btn">詳細を読む</a>
+              <a href="{{ route('privateShow', ['id' => $review->id ]) }}" class="btn btn-secondary detail-btn">詳細を読む</a>
             </div>
         </div>
     </div>

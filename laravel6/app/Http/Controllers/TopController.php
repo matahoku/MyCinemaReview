@@ -14,10 +14,16 @@ class TopController extends Controller
       return view('index', compact('reviews'));
     }
 
-    public function show($id)
+    public function publicShow($id)
     {
       $review = Review::where('id', $id)->first();
-      return view('show', compact('review'));
+      return view('publicShow', compact('review'));
+    }
+
+    public function privateShow($id)
+    {
+      $review = Review::where('id', $id)->first();
+      return view('privateShow', compact('review'));
     }
 
     public function create()
@@ -71,7 +77,7 @@ class TopController extends Controller
       return view('homeSearch', $param);
     }
 
-    public function release(Request $request)
+    public function public(Request $request)
     {
       $review = Review::findOrFail($request->id);
       $review->increment('status',1);

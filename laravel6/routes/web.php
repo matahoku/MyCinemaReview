@@ -6,7 +6,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/','TopController@index')->name('/');
 
-Route::get('/show/{id}','TopController@show')->name('show');
+Route::get('/show/public/{id}','TopController@publicShow')->name('publicShow');
+
+Route::get('/show/private/{id}','TopController@privateshow')->name('privateShow');
 
 Route::get('/review','TopController@create')->name('create');
 
@@ -20,6 +22,6 @@ Route::post('/review/edit/delete','TopController@delete')->name('delete');
 
 Route::post('/review/homeSearch', 'TopController@homeSearch')->name('homeSearch');
 
-Route::post('/review/release', 'TopController@release')->name('release');
+Route::post('/review/public', 'TopController@public')->name('public');
 
 Route::post('/review/private', 'TopController@private')->name('private');
