@@ -24,22 +24,18 @@
       <div class="card-body d-flex">
         <section class="review-main">
           <h3>タイトル</h2>
-          <p>{{ $review->title }}</p>
+          <p class="space">{{ $review->title }}</p>
           <h3>ジャンル</h2>
           <p>{{ $review->genre }}</p>
           <h3>ストーリー</h2>
-          <p>{{ $review->story }}</p>
+          <p class="space">{{ $review->story }}</p>
           <h3>レビュー本文</h2>
-          <p>{{ $review->body }}</p>
+          <p class="space">{{ $review->body }}</p>
           <h3 id="rated-element">総合評価</h2>
           <div class="starability-result" data-rating="{{ $review->rating }}" aria-description="rated-element"></div>
         </section>
         <aside class="review-image">
-          @if(!empty($review->image))
-            <img class="movie-image" src="{{ asset('storage/images/'.$review->image) }}" >
-          @else
             <img class="movie-image" src="{{ asset('images/dummy.png') }}">
-          @endif
         </aside>
       </div>
       <div class="card-button">

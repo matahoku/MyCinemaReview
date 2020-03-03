@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Review;
 use App\Http\Requests\StoreRequest;
+
 
 class TopController extends Controller
 {
@@ -79,7 +81,7 @@ class TopController extends Controller
 
     public function homeSearch(Request $request)
     {
-      $item = Review::where('title', 'like', '%'. $request->input .'%')->orderBy('create_at', 'DESC')->get();
+      $item = Review::where('title', 'like', '%'. $request->input .'%')->where('user_id', Auth::id())->orderBy('create_at', 'DESC')->get();
       $param = ['input' =>$request->input ,'item' => $item];
       return view('homeSearch', $param);
     }

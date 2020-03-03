@@ -14,3 +14,6 @@
 .card-button {
     padding-left:20px;
 }
+.space {
+    white-space:pre-wrap;
+}
