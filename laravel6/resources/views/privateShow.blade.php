@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('css')
+<link href="{{ asset('css/top.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/show.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('starability-minified/starability-all.min.css') }}">
 @endsection
@@ -14,6 +15,7 @@
 @endsection
 
 @section('switch')
+<p class="current-page"> 現在：マイページ</p>
 <a href="{{ route('/') }}" class="btn-gradient-3d-orange" style="text-decoration:none;">公開ページへ</a>
 @endsection
 

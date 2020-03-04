@@ -45,7 +45,7 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="">Myシネマレビューとは？</a>
+                                <a class="nav-link" href="{{ route('description') }}">Myシネマレビューとは？</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -57,7 +57,7 @@
                             @endif
                         @else
                             <li class="nav-item">
-                              <a class="nav-link" href="">Myシネマレビューとは？</a>
+                              <a class="nav-link" href="{{ route('description') }}">Myシネマレビューとは？</a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href="{{ route('create') }}">レビューを書く</a>
@@ -107,7 +107,7 @@
             @yield('content')
         </main>
         <footer class="footer p10">
-            <small>copyright MyCinemaReview 2020</small>
+            <small>@ 2020 matamura </small>
         </footer>
     </div>
 </body>

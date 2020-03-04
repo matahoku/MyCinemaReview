@@ -8,7 +8,11 @@
 }
 .movie-title {
   height: 2em;
+  font-size:23px;
   overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .description{
   width:100%;
@@ -21,6 +25,12 @@
   width: 80%;
   margin: auto;
 }
-.pagination{
+.pagination {
   justify-content:  center;
+}
+
+.current-page{
+  color:white;
+  margin-right:20px;
+  margin-bottom:0;
 }

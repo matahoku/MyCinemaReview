@@ -27,3 +27,5 @@ Route::post('/review/homeSearch', 'TopController@homeSearch')->name('homeSearch'
 Route::post('/review/public', 'TopController@public')->name('public');
 
 Route::post('/review/private', 'TopController@private')->name('private');
+
+Route::get('/description', 'TopController@description')->name('description');

@@ -13,6 +13,7 @@
 @endsection
 
 @section('switch')
+<p class="current-page"> 現在：公開ページ</p>
 <a href="{{ route('home')}}" class="btn-gradient-3d-simple" style="text-decoration:none;">マイページへ</a>
 @endsection
 

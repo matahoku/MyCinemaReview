@@ -103,6 +103,10 @@ class TopController extends Controller
       return back();
     }
 
+    public function description()
+    {
+      return view('description');
+    }
 
 
 }
