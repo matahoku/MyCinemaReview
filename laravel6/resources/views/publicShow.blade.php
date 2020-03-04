@@ -19,7 +19,7 @@
 
 @section('content')
 <div class="container">
-  <h1 class="pagetitle">レビュー詳細ページ</h1>
+  <h1 class="pagetitle">レビュー詳細ページ <br> <small>投稿者: {{ $review->public_nickname }}さん</small></h1>
     <div class="card">
       <div class="card-body d-flex">
         <section class="review-main">
@@ -39,7 +39,7 @@
         </aside>
       </div>
       <div class="card-button">
-        <a href="{{ route('home') }}" class="btn btn-info btn-back mb20">一覧へ戻る</a>
+        <a href="{{ route('/') }}" class="btn btn-info btn-back mb20">一覧へ戻る</a>
       </div>
     </div>
   </div>

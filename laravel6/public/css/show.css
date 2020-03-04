@@ -17,3 +17,10 @@
 .space {
     white-space:pre-wrap;
 }
+.review-main{
+  margin-right:70px;
+}
+
+small {
+  font-size:25px;
+}

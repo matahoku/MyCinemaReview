@@ -22,7 +22,7 @@
         @csrf
         <div class="card">
             <div class="card-body">
-
+              <input type="hidden" name="nickname" value="{{ Auth::user()->nickname }}">
               <div class="form-group">
                 <label>映画のタイトル</label>
                 <input type='text' class='form-control' name='title' value="{{ old('title') }}" placeholder='タイトルを入力'>

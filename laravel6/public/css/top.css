@@ -7,7 +7,7 @@
   object-fit:cover;
 }
 .movie-title {
-  height: 3.5em;
+  height: 2em;
   overflow: hidden;
 }
 .description{

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Review;
+use App\User;
 use App\Http\Requests\StoreRequest;
 
 
@@ -40,12 +41,12 @@ class TopController extends Controller
 
       if ($request->hasFile('image')) {
           $request->file('image')->store('/public/images');
-          $data = ['user_id'=> \Auth::id(), 'title'=>$post['title'], 'genre'=>$post['genre'],
-                   'story'=>$post['story'], 'body'=>$post['body'], 'rating'=>$post['rating'],
-                   'image'=>$request->file('image')->hashName()];
+          $data = ['user_id'=> \Auth::id(), 'public_nickname'=>$post['nickname'], 'title'=>$post['title'],
+                   'genre'=>$post['genre'], 'story'=>$post['story'], 'body'=>$post['body'],
+                   'rating'=>$post['rating'], 'image'=>$request->file('image')->hashName()];
         } else {
-          $data = ['user_id'=> \Auth::id(), 'title'=>$post['title'], 'genre'=>$post['genre'],
-                  'story'=>$post['story'], 'body'=>$post['body'], 'rating'=>$post['rating']];
+          $data = ['user_id'=> \Auth::id(),'public_nickname'=>$post['nickname'], 'title'=>$post['title'],
+                   'genre'=>$post['genre'], 'story'=>$post['story'], 'body'=>$post['body'], 'rating'=>$post['rating']];
         }
         Review::insert($data);
         return redirect('/home');

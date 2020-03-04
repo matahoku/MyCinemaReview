@@ -25,6 +25,7 @@
               <div class="image-wrapper"><img src="{{ asset('images/dummy.png') }}" class="movie-image" ></div>
               <h3 class="movie-title">{{ $review->title }}</h3>
               <p class="description">{{ $review->body }}</p>
+              <p>投稿者：{{ $review->public_nickname }}さん</p>
               <a href="{{ route('publicShow', ['id' => $review->id ]) }}" class="btn btn-secondary detail-btn">詳細を読む</a>
             </div>
         </div>

@@ -8,6 +8,8 @@
     "Name": "名前",
     "E-Mail Address": "メールアドレス",
     "Password": "パスワード",
-    "Confirm Password": "パスワード(確認用)",
-    "Remember Me": "ログイン状態を保存"
+    "Confirm Password": "パスワード (確認用)",
+    "Remember Me": "ログイン状態を保存",
+
+    "Nickname":"ニックネーム"
 }
