@@ -21,6 +21,8 @@
   margin-right:70px;
 }
 
-small {
-  font-size:25px;
+.current-page{
+  color:white;
+  margin-right:20px;
+  margin-bottom:0;
 }

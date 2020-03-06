@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('css')
-<link href="{{ asset('css/top.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/show.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('starability-minified/starability-all.min.css') }}">
 @endsection

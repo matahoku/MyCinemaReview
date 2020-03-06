@@ -107,7 +107,7 @@
             @yield('content')
         </main>
         <footer class="footer p10">
-            <small>@ 2020 matamura </small>
+            <small>@ 2020 copyright matamura </small>
         </footer>
     </div>
 </body>
