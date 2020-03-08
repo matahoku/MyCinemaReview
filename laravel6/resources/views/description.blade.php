@@ -30,7 +30,8 @@
   </p>
   <h3>お問い合わせ</h3>
   <p>ご意見・ご要望などがございましたら、お気軽にお問い合わせください。<br>
-  ※お返事にはお時間をいただく場合がございます。予めご了承いただきますようお願いいたします。</p>
+  ※お返事にはお時間をいただく場合がございます。予めご了承いただきますようお願いいたします。<br>
+  ※メールアドレスは間違いのないようご記入下さい。間違いがあった際は回答することが困難になります。</p>
     <form  action="{{ route('contact') }}" method="post">
       @csrf
       <div class="card">
@@ -55,7 +56,7 @@
          </div>
          <div class="form-group">
            <label>お問い合わせ内容</label>
-           <textarea name="message" rows="8" cols="80" class="form-control" value="{{ old('message') }}"></textarea>
+           <textarea name="body" rows="8" cols="80" class="form-control" value="{{ old('body') }}"></textarea>
          </div>
          <p>内容をご確認のうえ送信ボタンをクリックしてください</p>
          <input type="submit" class="btn btn-primary">

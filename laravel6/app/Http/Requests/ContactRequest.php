@@ -26,7 +26,7 @@ class ContactRequest extends FormRequest
         return [
           'name' => 'required',
           'email' => 'required|email',
-          'message' => 'required',
+          'body' => 'required',
         ];
     }
 
@@ -35,7 +35,7 @@ class ContactRequest extends FormRequest
         return [
           'name.required' => '名前を入力して下さい。',
           'email.required' => 'メールアドレスを入力して下さい。',
-          'message.required' => '内容を入力して下さい。',
+          'body.required' => '内容を入力して下さい。',
         ];
     }
 }
