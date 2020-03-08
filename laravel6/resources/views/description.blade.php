@@ -14,7 +14,7 @@
   <p>
   公開ページのレビューにはネタバレが含まれている可能性があります。<br>
   閲覧は自己責任でお願いします。<br>
-  また、公開ページに不適切な投稿が上げられているの（映画と無関係なレビュー等)を発見した際は、投稿を削除しますのでご容赦下さい。
+  また、公開ページで不適切な投稿（映画と無関係なレビュー等)を発見した際は、投稿を削除しますのでご容赦下さい。
   </p>
   <h3>使用素材</h3>
   <a href="https://pixabay.com/ja/users/OpenClipart-Vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=152088">OpenClipart-Vectors</a>様による<a href="https://pixabay.com/ja/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=152088">Pixabay</a>からの画像
@@ -29,7 +29,39 @@
   現状、シンプル イズ ベストな構成になっていますが、今後良いアイデアが浮かんだら拡張していくかもしれません...。
   </p>
   <h3>お問い合わせ</h3>
-  gmail:
+  <p>ご意見・ご要望などがございましたら、お気軽にお問い合わせください。<br>
+  ※お返事にはお時間をいただく場合がございます。予めご了承いただきますようお願いいたします。</p>
+    <form  action="{{ route('contact') }}" method="post">
+      @csrf
+      <div class="card">
+        <div class="card-body">
+          @if ($errors->any())
+                <div class="alert alert-danger">
+                  <h4 style="font-size:18px; padding-left:20px;">入力エラーです。下記の項目を確認して下さい。</h4>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+          @endif
+          <div class="form-group">
+            <label>お名前</label>
+            <input type="text" name="name" class="form-control" value="{{ old('name') }}">
+         </div>
+         <div class="form-group">
+           <label>メールアドレス</label>
+           <input type="text" name="email" class="form-control" value="{{ old('email') }}">
+         </div>
+         <div class="form-group">
+           <label>お問い合わせ内容</label>
+           <textarea name="message" rows="8" cols="80" class="form-control" value="{{ old('message') }}"></textarea>
+         </div>
+         <p>内容をご確認のうえ送信ボタンをクリックしてください</p>
+         <input type="submit" class="btn btn-primary">
+       </div>
+      </div>
+    </form>
 </div>
 
 

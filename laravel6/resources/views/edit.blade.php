@@ -5,16 +5,6 @@
 @endsection
 
 @section('content')
-<div class="container">
-@if ($errors->any())
-      <div class="alert alert-danger">
-          <ul>
-              @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-              @endforeach
-          </ul>
-      </div>
-@endif
 <div class="row justify-content-center container">
     <div class="col-md-10">
       <h1 class='pagetitl' >レビュー編集ページ</h1>
@@ -22,7 +12,16 @@
         @csrf
         <div class="card">
             <div class="card-body">
-
+              @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <h4 style="font-size:18px; padding-left:20px;">入力エラーです。下記の項目を確認して下さい。</h4>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                              <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+              @endif
               <div class="form-group">
                 <input type="hidden" name="id" value="{{ $form->id }}">
 
@@ -94,6 +93,5 @@
         </div>
       </form>
     </div>
-  </div>
 </div>
 @endsection
