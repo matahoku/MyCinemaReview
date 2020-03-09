@@ -3,9 +3,17 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Foundation\Http\Request;
 
 class ContactRequest extends FormRequest
 {
+    public $redirect;
+
+    protected function getRedirectUrl()
+    {
+     return url()->previous() . '#contact';
+    }
+
     /**
      * Determine if the user is authorized to make this request.
      *

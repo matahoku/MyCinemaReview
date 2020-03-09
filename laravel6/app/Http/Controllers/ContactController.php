@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactSendmail;
-
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\URL;
 
 class ContactController extends Controller
 {
@@ -20,7 +21,7 @@ class ContactController extends Controller
       Contact::create($request->all());
       Mail::to($to)->send(new ContactSendmail($input));
       $request->session()->regenerateToken();
-      return back();
+      return Redirect::route('description', ['#contact'])->with('flash_message', 'お問い合わせを受け付けました。');
     }
 
 

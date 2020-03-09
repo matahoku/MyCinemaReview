@@ -31,10 +31,10 @@
   <h3>お問い合わせ</h3>
   <p>ご意見・ご要望などがございましたら、お気軽にお問い合わせください。<br>
   ※お返事にはお時間をいただく場合がございます。予めご了承いただきますようお願いいたします。<br>
-  ※メールアドレスは間違いのないようご記入下さい。間違いがあった際は回答することが困難になります。</p>
+  ※メールアドレスは間違いのないようご記入下さい。間違っていた場合は回答することが困難になります。</p>
     <form  action="{{ route('contact') }}" method="post">
       @csrf
-      <div class="card">
+      <div class="card"  id='contact'>
         <div class="card-body">
           @if ($errors->any())
                 <div class="alert alert-danger">
@@ -45,6 +45,11 @@
                         @endforeach
                     </ul>
                 </div>
+          @endif
+          @if (session('flash_message'))
+            <div class="flash_message alert alert-success text-center py-3 my-0 mb30">
+                {{ session('flash_message') }}
+            </div>
           @endif
           <div class="form-group">
             <label>お名前</label>
