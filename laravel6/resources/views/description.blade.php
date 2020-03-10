@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('switch')
+<a href="{{ route('/') }}" class="btn-gradient-3d-orange" style="text-decoration:none; margin-right:30px;">公開ページへ</a>
+<a href="{{ route('home')}}" class="btn-gradient-3d-simple" style="text-decoration:none;">マイページへ</a>
+@endsection
+
 @section('content')
 <div class="container">
   <h1 style="margin-bottom:15px;">Myシネマレビューとは？</h1>
