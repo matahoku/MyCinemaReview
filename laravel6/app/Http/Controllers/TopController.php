@@ -63,7 +63,17 @@ class TopController extends Controller
       $review = Review::findOrFail($request->id);
       $form = $request->all();
       unset($form['_token']);
-      $review->fill($form)->save();
+      if($request->hasFile('image')){
+        $deleteimage = Review::findOrFail($request->id);
+        $deletename = $deleteimage->image;
+        $delpath = storage_path() . '/app/public/images/' . $deletename;
+        \File::delete($delpath);
+        $request->file('image')->store('/public/images');
+        $form = ['image' => $request->file('image')->hashName()];
+        $review->fill($form)->save();
+      }else{
+        $review->fill($form)->save();
+      }
       return redirect('/home');
     }
 

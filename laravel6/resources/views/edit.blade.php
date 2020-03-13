@@ -82,7 +82,7 @@
               </fieldset>
 
               <div class="form-group">
-                <label for="file1" style="margin-top:10px;">映画のサムネイル（※サムネイルは再設定して下さい。）</label>
+                <label for="file1" style="margin-top:10px;">映画のサムネイル</label>
                 <input type="file" id="file1" name='image' class="form-control-file">
               </div>
 
