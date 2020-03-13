@@ -69,7 +69,8 @@ class TopController extends Controller
         $delpath = storage_path() . '/app/public/images/' . $deletename;
         \File::delete($delpath);
         $request->file('image')->store('/public/images');
-        $form = ['image' => $request->file('image')->hashName()];
+        $form = [ 'title'=>$form['title'], 'genre'=>$form['genre'], 'story'=>$form['story'], 'body'=>$form['body'],
+                 'rating'=>$form['rating'], 'image'=>$request->file('image')->hashName()];
         $review->fill($form)->save();
       }else{
         $review->fill($form)->save();
@@ -77,9 +78,18 @@ class TopController extends Controller
       return redirect('/home');
     }
 
-    public function delete(Request $request)
+    public function delete(StoreRequest $request)
     {
-      Review::find($request->id)->delete();
+      $review = Review::findOrFail($request->id);
+      if(isset($review->image)){
+        $deleteimage = Review::findOrFail($request->id);
+        $deletename = $deleteimage->image;
+        $delpath = storage_path() . '/app/public/images/' . $deletename;
+        \File::delete($delpath);
+        $review->delete();
+      } else {
+        $review->delete();
+      }
       return redirect('/home');
     }
 
