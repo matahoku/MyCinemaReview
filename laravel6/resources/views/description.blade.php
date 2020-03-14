@@ -19,7 +19,8 @@
   <p>
   公開ページのレビューにはネタバレが含まれている可能性があります。<br>
   閲覧は自己責任でお願いします。<br>
-  また、公開ページで不適切な投稿（映画と無関係なレビュー等)を発見した際は、投稿を削除しますのでご容赦下さい。
+  公開ページで不適切な投稿（映画と無関係なレビュー等)を発見した際は、投稿を削除しますのでご容赦下さい。<br>
+  MyシネマレビューはPCでの利用を想定して作成しています。スマートフォンでのご利用はレイアウト崩れ等が発生する可能性があります。ご了承下さい。
   </p>
   <h3>使用素材</h3>
   <a href="https://pixabay.com/ja/users/OpenClipart-Vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=152088">OpenClipart-Vectors</a>様による<a href="https://pixabay.com/ja/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=152088">Pixabay</a>からの画像
