@@ -3,7 +3,7 @@
 お気に入りの映画記録は他の人が閲覧可能なページ（公開ページ）に掲載可能です。 <br>
 
 ## デモ
-準備中
+![demo](https://raw.github.com/wiki/matahoku/MyCinemaReview/images/MyCinemaReview.gif)
 
 ## 概要
 「映画が好きだから記録を付けたいな。でも手書きは面倒だし..。インターネットにあるレビューサイトは公開前提で嫌だな...。」 <br>
