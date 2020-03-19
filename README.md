@@ -41,6 +41,9 @@ starability.css　https://github.com/LunarLogic/starability <br>
 
 ## リリース
 Myシネマレビューへのリンク　→　http://my-cinema-review.com
+会員ページ体験用仮ログイン　アドレス：dummyuser@aaa　パスワード：dummyuser
+
+　　　　
 
 
 
