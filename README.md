@@ -38,14 +38,3 @@ starability.css　https://github.com/LunarLogic/starability <br>
 レビュー検索機能（タイトル検索） <br>
 お問い合わせフォーム（投稿内容はGメールで受信） <br>
 ペジネーション<br>
-
-## リリース
-Myシネマレビューへのリンク　→　http://my-cinema-review.com<br>
-会員ページ体験用仮ログイン　アドレス：dummyuser@aaa　パスワード：dummyuser
-
-　　　　
-
-
-
-
-
